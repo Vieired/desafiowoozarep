@@ -1,0 +1,45 @@
+body {
+    background-image: url('../img/354.jpg');
+    background-repeat: repeat-y;
+    background-size: 100%
+}
+
+section:first-child, header {
+    margin-top: 80px;
+}
+
+.carregando {
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    background-image: url(../img/loading.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.btn .fas {
+    margin-right: 5px
+}
+
+.card-text .fas {
+    float: right
+}
+
+@keyframes efeito {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.card {
+    animation-name: efeito;
+    animation-duration: .7s;
+}
+
+.list-group-item-action:active,
+.list-group-item-action:focus {
+    color: #ffffff;
+    background-color: #f9ca2c;
+    text-shadow: 0px -1px 2px #a0821e;
+}

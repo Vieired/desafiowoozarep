@@ -1,0 +1,60 @@
+<div ng-controller="DadosPessoaisController">
+    <section class="container">
+        <div class="row justify-content-center">
+            <form class="col-10 col-md-10">
+                <div class="card text-white bg-info mb-3">
+                    <!-- <div class="card-header">Dados Pessoais</div> -->
+                    <div class="card-body">
+                        <p class="card-text">
+                            <span ng-model="msg">Cadastre seus dados pessoais</span><span class="text-right"><i class="fas fa-user-circle fa-2x"></i></span>
+                        </p>                        
+                        <div class="row">
+                            <div class="col-md-12 col-lg-7">
+                                <div class="form-group">
+                                    <label for="nome">Nome *</label>
+                                    <input ng-model="dadosPessoais.nome" type="text" id="nome" class="form-control" required maxlength="50" placeholder="Até 50 caracteres">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-7 col-lg-5">
+                                <div class="form-group">
+                                    <label for="email">E-mail *</label>
+                                    <input ng-model="dadosPessoais.email" type="email" id="email" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-5 col-lg-4">
+                                <div class="form-group">
+                                    <label for="telefone">Telefone *</label>
+                                    <input ng-model="dadosPessoais.telefone" type="tel" id="telefone" class="form-control" required>
+                                </div>
+                            </div>                            
+                            <div class="col-12 col-sm-7 col-md-5 col-lg-4">
+                                <div class="form-group">
+                                    <label for="nascimento">Nascimento *</label>
+                                    <input ng-model="dadosPessoais.nascimento" type="date" id="nascimento" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-5 col-md-7 col-lg-4">
+                                <div class="form-group">
+                                    <label for="cpf">CPF *</label>
+                                    <input ng-model="dadosPessoais.cpf" type="text" id="cpf" class="form-control" minlength="11" maxlength="11" alt="CPF" autocomplete="off" pattern="[0-9]{11}" title="Somente os 11 algarismos" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="text-right">
+                            <div class="button-group">
+                                <a href="#!planos" class="btn btn-info">
+                                    <i class="fas fa-arrow-left"></i>Voltar
+                                </a>
+                                <button type="submit" ng-click="concluirCadastro(dadosPessoais)" class="btn btn-light">
+                                    <i class="fas fa-paper-plane"></i>Enviar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>        
+        </div>
+    </section>
+</div>

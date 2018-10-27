@@ -1,0 +1,57 @@
+<div ng-controller="PlanosController">
+    <div ng-if="carregando" class="carregando"></div>
+    <div ng-if="!carregando">
+        <section>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xs-10 col-md-8 col-lg-6">
+
+                        <div class="card text-white bg-info mb-3">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <span ng-bind="msg"></span>
+                                    <span class="text-right">
+                                        <i class="fas fa-money-check-alt fa-2x d-none d-sm-block d-md-block d-lg-block d-xl-block"></i>
+                                    </span>
+                                </p>
+                                <div class="list-group mb3">
+                                    <button type="button" class="list-group-item list-group-item-action" 
+                                        ng-repeat="plano in planos"
+                                        ng-click="salvarPlano(plano.sku)">
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <h1 ng-bind="plano.franquia"></h1>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-10 offset-1">
+                                                <h3 ng-bind="plano.aparelho.nome"></h3>
+                                            </div>
+                                        </div>
+                                        <div class="col-10 offset-1">
+                                            <p ng-bind="plano.valor"></p>
+                                        </div>
+                                        <p ng-bind="plano.ativo" ng-hide="true"></p>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="text-right">
+                                    <div class="button-group">
+                                        <a href="#!home" class="btn btn-info">
+                                            <i class="fas fa-arrow-left"></i>Voltar
+                                        </a>                
+                                        <a href="#!dadospessoais" class="btn btn-light">
+                                            <i class="fas fa-check"></i>Próximo
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div> 
+            </div>
+        </section>
+    </div>
+</div>

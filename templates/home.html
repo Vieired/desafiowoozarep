@@ -1,0 +1,41 @@
+<div ng-controller="IndexController">
+    <div ng-if="carregando" class="carregando"></div>
+    <div ng-if="!carregando">
+        <div class="container">
+            <section>
+                <div class="row justify-content-center">
+                    <div class="col-xs-10 col-md-8 col-lg-6">
+
+                        <div class="fade-in card text-white bg-info mb-3">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <span ng-bind="msg"></span>
+                                    <span class="text-right">
+                                        <i class="fas fa-hand-holding fa-2x d-none d-sm-block d-md-block d-lg-block d-xl-block"></i>
+                                    </span>
+                                </p>
+                                <div class="list-group">
+                                    <button type="button" class="list-group-item list-group-item-action" 
+                                        ng-repeat="plataforma in plataformas"
+                                        ng-click="salvarPlataforma(plataforma.sku)">
+                                        <h4 ng-bind="plataforma.nome"></h4>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="text-right">
+                                    <div class="button-group">
+                                        <a href="#!planos" ng-click="carregarPlanos()" class="btn btn-light">
+                                            <i class="fas fa-check"></i>Próximo
+                                        </a>
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>                   
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+{"planos": [
+    {
+        "sku": "WI00001NA_NOVA_LINHA",
+        "franquia": "1GB",
+        "valor": "47,60",
+        "aparelho": {
+            "nome": "Roteador",
+            "valor": "299,00",
+            "numeroParcelas": 5,
+            "valorParcela": "59,80"
+        },
+        "ativo": true
+    },
+    {
+        "sku": "WI00002NA_NOVA_LINHA",
+        "franquia": "2GB",
+        "valor": "59,90",
+        "aparelho": {
+            "nome": "Roteador",
+            "valor": "99,00",
+            "numeroParcelas": 1,
+            "valorParcela": false
+        },
+        "ativo": true
+    }
+]}
